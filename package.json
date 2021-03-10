@@ -1,0 +1,15 @@
+{
+  "name": "async-app",
+  "version": "1.0.0",
+  "description": "Understanding JavaScript's callback, Promise, async/await",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["JavaScript", "Callback", "Promise", "Async/Await"],
+  "author": "Zaki Mohammed",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
