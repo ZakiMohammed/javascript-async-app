@@ -1,4 +1,4 @@
-const source = {
+const db = {
     users: [
         { id: 1, name: 'Allen' },
         { id: 2, name: 'John' },
@@ -19,6 +19,4 @@ const source = {
     ]
 }
 
-module.exports = {
-    source
-};
+module.exports = db;

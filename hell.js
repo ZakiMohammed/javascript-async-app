@@ -1,8 +1,8 @@
-const db = require('../db')
+const db = require('./db')
 
 const fetchUserById = (id, callback) => {
     setTimeout(() => {
-        const results = db.source.users.find(i => i.id === id);
+        const results = db.users.find(i => i.id === id);
         results ?
             callback(null, results) :
             callback('Not found', null);
@@ -11,7 +11,7 @@ const fetchUserById = (id, callback) => {
 
 const fetchPostsByUserId = (userId, callback) => {
     setTimeout(() => {
-        const results = db.source.posts.filter(i => i.userId === userId);
+        const results = db.posts.filter(i => i.userId === userId);
         results.length ?
             callback(null, results) :
             callback('Not found', null);
@@ -20,7 +20,7 @@ const fetchPostsByUserId = (userId, callback) => {
 
 const fetchCommentsByPostId = (postId, callback) => {
     setTimeout(() => {
-        const results = db.source.comments.filter(i => i.postId === postId);
+        const results = db.comments.filter(i => i.postId === postId);
         results.length ?
             callback(null, results) :
             callback('Not found', null);

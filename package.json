@@ -1,7 +1,7 @@
 {
-  "name": "async-app",
+  "name": "callback-app",
   "version": "1.0.0",
-  "description": "Understanding JavaScript's callback, Promise, async/await",
+  "description": "Understanding JavaScript's callback their pros and hells",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,7 @@
   "keywords": [
     "JavaScript",
     "Callback",
-    "Promise",
-    "Async/Await"
+    "Callback Hell"
   ],
   "author": "Zaki Mohammed",
   "license": "ISC",
