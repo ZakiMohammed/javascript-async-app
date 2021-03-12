@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["JavaScript", "Callback", "Promise", "Async/Await"],
+  "keywords": [
+    "JavaScript",
+    "Callback",
+    "Promise",
+    "Async/Await"
+  ],
   "author": "Zaki Mohammed",
   "license": "ISC",
   "dependencies": {
