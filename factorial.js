@@ -10,7 +10,7 @@ const factorial = (number, callback) => {
     }
 };
 
-factorial(5, (error, result) => {
+factorial('5', (error, result) => {
     if (error) {
         console.log('Error Occurred:', error);
         return;

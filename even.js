@@ -8,5 +8,5 @@ const isEven = (number, callback) => {
 };
 
 isEven(10, result => result ?
-    console.log('The number is even') :
-    console.log('The number is odd'));
+    console.log("Yay! it's even") :
+    console.log("Meh! it's odd"));
