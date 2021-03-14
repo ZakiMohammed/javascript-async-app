@@ -27,7 +27,8 @@ const fetchCommentsByPostId = (postId, callback) => {
     }, 2000);
 };
 
-const fromHell = (user) => {
+const userLoaded = (user) => {
+    // came from callback hell
     console.log('user:', user);
 };
 
@@ -42,24 +43,28 @@ fetchUserById(1, (err, user) => {
             console.log('Error:', err);
             return;
         }
-        user.posts = posts;
+        user.posts = posts.map(i => ({ id: i.id, title: i.title, comments: [] }));
 
+        // user have not posts
         if (!user.posts.length) {
-            fromHell(user);
+            userLoaded(user);
             return;
         }
 
         let postCount = 1;
-        const onCommentsComplete = () => postCount === user.posts.length ? fromHell(user) : postCount++;
-
         user.posts.forEach(post => {
             fetchCommentsByPostId(post.id, (err, comments) => {
                 if (err) {
                     console.log('Error:', err);
                     return;
                 }
-                post.comments = comments;
-                onCommentsComplete();
+                post.comments = comments.map(i => ({ id: i.id, title: i.title }));
+
+                if (postCount === user.posts.length) {
+                    userLoaded(user);
+                } else {
+                    postCount++;
+                }
             })
         });
     });
